@@ -38,7 +38,7 @@ public class Functions extends Toy implements showInfo, addAToy, deleteToy {
                 prizePool.add(c);
                 int new_count = c.getNumOfToys() - 1;
                 c.setNumOfToys(new_count);
-                System.out.printf("You win a %s!", c.getName());
+                System.out.printf("You win a %s!\n", c.getName());
             }
         }
     }
@@ -81,5 +81,20 @@ public class Functions extends Toy implements showInfo, addAToy, deleteToy {
         for (Toy s : toys)
             System.out.printf("ID: %s\nName: %s\nNumber of toys left: %s\nValue of a toy: %s\nCommentary: %s\n\n",
                     s.getID(), s.getName(), s.getNumOfToys(), s.getValue(), s.getComment());
+    }
+    public void showPrizePool()
+    {
+        for (Toy s : prizePool)
+            System.out.printf("ID: %s\nName: %s\nNumber of toys left: %s\nValue of a toy: %s\nCommentary: %s\n\n",
+                    s.getID(), s.getName(), s.getNumOfToys(), s.getValue(), s.getComment());
+    }
+
+    public Toy findByID(String a)
+    {
+        for (Toy c : toys)
+        {
+            if (a.equals(c.getID())) return c;
+        }
+        return null;
     }
 }
