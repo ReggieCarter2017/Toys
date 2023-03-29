@@ -1,0 +1,31 @@
+1)
+mkdir toysForSchoolChildren
+mkdir toysForPreschoolers
+
+2) cd ./toysForSchoolChildren/
+cat > robots
+cat > constructor
+cat > boardGames
+
+3) cd ~
+cd ./toysForPreSchoolers
+cat > dolls
+cat > cars
+cat > stuffedToys
+
+4) mkdir toysName
+mv toysForSchoolChildren toysForPreschoolers toysName
+
+5)mv toysName toys
+
+6)cd toys/
+ls -al
+
+7) sudo apt update
+snap find chromium
+sudo snap install chromium
+
+8) */3 * * * * mkdir -p temp
+
+
+
