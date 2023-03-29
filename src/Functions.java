@@ -17,9 +17,20 @@ public class Functions extends Toy implements showInfo, addAToy, deleteToy {
         return rand == 1;
     }
 
+    public Boolean checkID(String ID)
+    {
+        for (Toy c : toys)
+        {
+            if (ID.equals(c.getID()))
+                return false;
+        }
+        return true;
+    }
+
     public void input()
     {
-        int temp = sc.nextInt();
+        System.out.println("Type any key to start: ");
+        String temp = sc.next();
         for (Toy c : toys)
         {
             if (checkIfWin(c.getValue()))
@@ -27,6 +38,7 @@ public class Functions extends Toy implements showInfo, addAToy, deleteToy {
                 prizePool.add(c);
                 int new_count = c.getNumOfToys() - 1;
                 c.setNumOfToys(new_count);
+                System.out.printf("You win a %s!", c.getName());
             }
         }
     }
